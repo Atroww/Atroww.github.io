@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enzo Achaintre | Recherche Alternance Marketing Digital</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+
+body {
+    background-color:#0b0f1a;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+section {
+    padding:45px 12%;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp 0.8s ease forwards;
+}
+
+section:nth-child(1){animation-delay:0.2s;}
+section:nth-child(2){animation-delay:0.4s;}
+section:nth-child(3){animation-delay:0.6s;}
+section:nth-child(4){animation-delay:0.8s;}
+section:nth-child(5){animation-delay:1s;}
+
+@keyframes fadeUp { to{opacity:1; transform:translateY(0);} }
+
+.hero {
+    height:75vh;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.hero h1 {
+    font-size:2.1rem;
+    font-weight:800;
+    margin-bottom:30px;
+    line-height:1.2;
+}
+
+.blue-text { color:#00bfff; font-weight:600; }
+.name-highlight { color:#00e0ff; font-weight:800; }
+
+.subtitle {
+    font-size:1.05rem;
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+h2 {
+    font-size:2.2rem;
+    margin-bottom:40px;
+    font-weight:700;
+}
+
+.section-spacing { margin-top:60px; }
+
+.grid-3 {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card {
+    background-color:#111827;
+    padding:35px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover { background-color:#1f2937; transform:translateY(-8px); }
+
+.card p { font-size:1.1rem; margin-bottom:10px; }
+
+.category-title {
+    font-size:1.35rem;
+    font-weight:700;
+    margin-bottom:15px;
+    color:#00e0ff;
+    border-bottom:2px solid #00e0ff;
+    padding-bottom:6px;
+}
+
+.small-title {
+    font-size:1rem;
+    color:#00e0ff;
+    font-weight:600;
+    margin-top:20px;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+
+.highlight { color:#00e0ff; font-weight:600; }
+
+.apport p {
+    margin-bottom:18px;
+    line-height:1.8;
+    font-size:1.15rem;
+}
+
+/* Timeline */
+
+.timeline {
+    border-left:2px solid #00e0ff;
+    padding-left:35px;
+}
+
+.timeline-item {
+    margin-bottom:35px;
+    font-size:1.1rem;
+    line-height:1.7;
+}
+
+.timeline-item h3 {
+    color:#00e0ff;
+    font-size:1.2rem;
+    margin-bottom:10px;
+    border-bottom:2px solid #00e0ff;
+    padding-bottom:4px;
+    display:inline-block;
+}
+
+/* Boutons */
+
+.btn {
+    padding:16px 38px;
+    background-color:#00e0ff;
+    color:#0b0f1a;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s;
+    display: inline-block;
+}
+
+.btn:hover { background:white; transform:translateY(-4px); }
+
+.btn-secondary {
+    padding:14px 32px;
+    border:2px solid #00e0ff;
+    color:#00e0ff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-secondary:hover {
+    background:#00e0ff;
+    color:#0b0f1a;
+}
+
+.btn-proof {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* Section Preuves Interactives */
+
+#proofs-section {
+    display: none;
+    background: #0d1424;
+    padding: 60px 12%;
+    border-top: 1px solid rgba(0, 224, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+}
+
+.breadcrumb {
+    color: #00e0ff;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.proof-item {
+    background: #111827;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.proof-item h4 {
+    color: #00e0ff;
+    margin-bottom: 12px;
+}
+
+.proof-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #1f2937;
+}
+
+.contact-buttons {
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer {
+    background-color:#05070d;
+    text-align:center;
+    padding:30px;
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.7rem; }
+    section { padding: 30px 6%; }
+    h2 { font-size: 1.8rem; }
+}
+</style>
+</head>
+
+<body id="top">
+
+<!-- HERO -->
+<section class="hero">
+    <h1>
+        Je ne cherche pas une alternance.<br>
+        Je cherche <span class="blue-text">une entreprise pour performer ensemble.</span>
+    </h1>
+
+    <div class="subtitle">
+        Sur un rythme de 3 jours en entreprise / 2 jours à l'IUT, à partir de septembre 2026 dans le <span class="blue-text">secteur du Digital</span>
+    </div>
+
+    <div class="subtitle">Dans la Région Parisienne</div>
+
+    <div class="subtitle">
+        BUT Techniques de Commercialisation Spécialisation Marketing Digital & E-business
+    </div>
+
+    <div class="subtitle">
+        <span class="name-highlight">Enzo Achaintre</span> – 19 ans – Permis B en cours
+    </div>
+</section>
+
+<!-- APPORT -->
+<section class="section-spacing">
+<h2>Ce que je peux vous apporter concrètement</h2>
+
+<div class="card apport">
+<p><span class="highlight">Une capacité à vendre et convaincre</span><br>
+Expérience terrain réelle avec argumentation, relation client et gestion commerciale.</p>
+
+<p><span class="highlight">Une communication claire et impactante</span><br>
+Développée grâce au concours d’éloquence et à la gestion d’équipes étudiantes.</p>
+
+<p><span class="highlight">Une vision marketing structurée</span><br>
+Projets concrets en BUT TC avec objectifs mesurables et stratégie définie.</p>
+
+<p><span class="highlight">Une gestion de projet efficace</span><br>
+Organisation d’événements, coordination et respect des deadlines.</p>
+
+<p><span class="highlight">Adaptabilité et esprit d’analyse</span><br>
+Compréhension rapide des environnements professionnels.</p>
+
+<p><span class="highlight">Énergie positive</span><br>
+Je peux vous apporter des rires et des sourires, bonne entente assurée !</p>
+</div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil">
+<h2>Grâce à mon profil qui mêle la Théorie et la Pratique</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3 class="category-title">🛍️ Expérience client</h3>
+<p><em>Ces emplois m'ont permis de développer une rigueur opérationnelle, un sens de l'accueil premium et une gestion du flux client en situation de forte affluence.</em></p>
+
+<div class="small-title">Sephora</div>
+<p>Vente et conseil client haut de gamme.</p>
+
+<div class="small-title">Super U</div>
+<p>Gestion logistique et encaissement.</p>
+
+<a href="https://www.linkedin.com/posts/enzo-achaintre-ba9aa4260_vieaeztudiante-buttc-bde-ugcPost-7426895885290242048-V7nV?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEA7w7EBALCJNJi_7LBLjK1X_YcbwNELij0" target="_blank" class="btn btn-proof">Ma prise de parole JPO</a>
+</div>
+
+<div class="card">
+<h3 class="category-title">📊 Business & Gestion</h3>
+
+<div class="small-title">Président du BDE</div>
+<p>Leadership d'équipe et gestion budgétaire.</p>
+
+<div class="small-title">BUT TC</div>
+<p>Master de Négociation : Mise en situation de vente réelle face à des acheteurs.</p>
+
+<button onclick="toggleProofs()" class="btn btn-proof">Voir mes preuves & projets</button>
+</div>
+
+<div class="card">
+<h3 class="category-title">💻 Marketing digital</h3>
+<p>Maîtrise opérationnelle des plateformes suivantes :</p>
+<p><strong>Réseaux sociaux :</strong> Instagram, LinkedIn, X, TikTok, Facebook</p>
+<p><strong>Outils :</strong> SEO, WordPress, Canva, Pack Office</p>
+<div class="small-title">Certification Pix</div>
+</div>
+
+</div>
+</section>
+
+<!-- SECTION PREUVES INTERACTIVES -->
+<div id="proofs-section">
+    <div class="breadcrumb">Accueil > Expériences > Détails & Preuves</div>
+    <h2>Dossier de preuves & réalisations</h2>
+
+    <div class="proof-grid">
+        <!-- BDE Instagram -->
+        <div class="proof-item">
+            <h4>Gestion des réseaux sociaux</h4>
+            <img src="image0 (8).jpg" alt="[Profil Instagram BDE RBTC]" class="proof-img" onerror="this.style.display='none'">
+            <p>Pilotage de la communication digitale du BDE pour engager la communauté étudiante.</p>
+        </div>
+
+        <!-- WEI -->
+        <div class="proof-item">
+            <h4>Organisation du WEI</h4>
+            <p>Planification complète et gestion logistique du Week-End d'Intégration. Nous étions 4 membres du BDE à gérer 150 étudiants nuit et jour.</p>
+            <a href="https://www.instagram.com/p/DQKArH5CKxl/" target="_blank" class="btn btn-proof">Voir le Post récap</a>
+        </div>
+
+        <!-- Partenariats -->
+        <div class="proof-item">
+            <h4>Partenariats & Vente</h4>
+            <img src="image1 (4).jpg" alt="[Partenariat Redbull]" class="proof-img" onerror="this.style.display='none'">
+            <img src="image0 (9).jpg" alt="[Vente de Roses VillaCyrus]" class="proof-img" style="margin-top:10px" onerror="this.style.display='none'">
+            <p>Négociation avec Redbull et organisation d'une vente de roses avec VillaCyrus.</p>
+            <a href="https://www.instagram.com/p/DUnqnJaiLwC/?igsh=ZnhpeHozdmk3eHoy" target="_blank" class="btn btn-proof">Détails de la vente</a>
+        </div>
+
+        <!-- Karos -->
+        <div class="proof-item">
+            <h4>Covoiturage Karos</h4>
+            <p>Sensibilisation au covoiturage étudiant via un partenariat stratégique avec l'application Karos.</p>
+            <a href="https://www.instagram.com/p/DO4A_q4iDrk/?igsh=MXd1anRrdTZxbGJkbw==" target="_blank" class="btn btn-proof">Publication Karos</a>
+        </div>
+
+        <!-- Soirée Bowling -->
+        <div class="proof-item">
+            <h4>Intégration Bowling</h4>
+            <p>Démarchage et gestion d'un événement rassemblant 280 étudiants à Rambouillet.</p>
+            <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDg3ODE3MDkwNjgxMTgy?story_media_id=3724527833637742184&igsh=OGNma2ZqZG5mbDVr" target="_blank" class="btn btn-proof">Story de la soirée</a>
+        </div>
+
+        <!-- Master Nego -->
+        <div class="proof-item">
+            <h4>Master de Négociation</h4>
+            <img src="image0 (10).jpg" alt="[Master de Négociation]" class="proof-img" onerror="this.style.display='none'">
+            <p>Préparation intensive et confrontation réelle avec des acheteurs professionnels.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <button onclick="toggleProofs()" class="btn-secondary">Réduire les preuves</button>
+    </div>
+</div>
+
+<!-- PARCOURS -->
+<section>
+<h2>Ainsi qu'à mon parcours</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Président BDE – UVSQ (Avril 2025 - Juin 2026)</h3>
+<p>Organisation événements étudiants</p>
+<p>Gestion financière</p>
+<p>Festival Inter filière upsaclay</p>
+<p>Animation des réseaux sociaux</p>
+</div>
+
+<div class="timeline-item">
+<h3>Super U – Hôte de caisse (Été 2025 + CDI temps partiel)</h3>
+<p>Gestion flux client</p>
+<p>Encaissement</p>
+<p>Logistique magasin</p>
+</div>
+
+<div class="timeline-item">
+<h3>Sephora – Conseiller vendeur (Janvier 2025)</h3>
+<p>Accueil client</p>
+<p>Conseils client</p>
+<p>Ventes et encaissement</p>
+<p>Mise en rayon / plan merchandising</p>
+<p>Gestion des stocks / logistique</p>
+</div>
+
+<div class="timeline-item">
+<h3>BUT Techniques de Commercialisation – UVSQ (Septembre 2024)</h3>
+<p>Marketing digital et e-business</p>
+<p>Négociation commerciale</p>
+<p>Projets marketing et stratégie</p>
+</div>
+
+<div class="timeline-item">
+<h3>Baccalauréat STMG – Option Ressources Humaines (2024)</h3>
+<p>Mention Assez Bien</p>
+</div>
+
+<div class="timeline-item">
+<h3>Association Eloquentia – Concours d’éloquence (2021)</h3>
+<p>Préparation concours « Est-on vraiment libre ? »</p>
+<p>Présentation devant 200 personnes</p>
+</div>
+
+<div class="timeline-item">
+<h3>Stephane Renaud – Stage 3ème Education Canine (2021)</h3>
+<p>Découverte du monde professionnel</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Discutons de votre croissance ensemble</h2>
+
+<div class="contact">
+<p>📍 Saint-Arnoult-en-Yvelines</p>
+<p>📞 07 67 73 97 42</p>
+<p>📩 enzo.achaintre@yahoo.com</p>
+
+<div class="contact-buttons">
+<a href="https://www.linkedin.com/in/enzo-achaintre-ba9aa4260/" target="_blank" class="btn">
+Retrouvez-moi également ici
+</a>
+
+<a href="#top" class="btn-secondary">
+Qui suis-je ?
+</a>
+</div>
+
+</div>
+</section>
+
+<div class="footer">
+<p>© 2026 Enzo Achaintre | Recherche Alternance Marketing Digital</p>
+</div>
+
+<script>
+function toggleProofs() {
+    const proofs = document.getElementById('proofs-section');
+    if (proofs.style.display === 'block') {
+        proofs.style.display = 'none';
+        document.getElementById('profil').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        proofs.style.display = 'block';
+        proofs.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
+
+</body>
+</html>
